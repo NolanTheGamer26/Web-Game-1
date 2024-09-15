@@ -1,33 +1,40 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'comic sans ms', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0px;
+    background-color: #474747;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #d8d8d8;
+    color: #000000;
     text-align: center;
     padding: 1rem;
 }
 
 main {
     padding: 20px;
+    color:#ffffff;
+    display: flex;
+    justify-content: space-between;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #af4c4c;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 10px; /* Add this line to round the corners */
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
 }
 
 footer {
@@ -38,4 +45,54 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+}
+
+.right-text {
+    text-align: center;
+    width: 100%;
+}
+
+.right-image {
+    float: right;
+    margin-left: 20px; /* Adds some space between the image and other content */
+    max-width: 40%; /* Ensures the image isn't too large */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px; /* Adds space above the image */
+    border-radius: 15px;
+
+}
+
+/* Clear the float to prevent layout issues */
+main::after {
+    content: "";
+    display: table;
+    clear: both;    
+}
+
+.left-column, .right-column {
+    width: 48%; /* Adjust as needed */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
+
+.right-column {
+    width: 48%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
