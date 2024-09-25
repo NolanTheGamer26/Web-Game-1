@@ -9,20 +9,43 @@
 <body>
     <header>
         <h1>Welcome to THE BEST Website</h1>
+        <button id="settingsBtn" onclick="console.log('Settings button clicked inline'); document.getElementById('settingsModal').style.display='block';">⚙️ Settings</button>
     </header>
     <main>
         <div class="left-column">
             <p>This is a simple website hosted on IIS. My mommy is the best and prettiest.</p>
             <button id="changeColorBtn">Change Background Color</button>
+            <canvas id="gameCanvas" width="300" height="200"></canvas>
+            <div>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+            </div>
         </div>
         <div class="right-column">
             <p class="right-text">Here is a picture:</p>
             <img src="/images/questionmark.jpg" alt="questionmark" class="right-image">
         </div>
+        <!-- Add the YouTube video here -->
+        <div class="video-container" id="videoContainer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EPGwfinKPWY?si=qvUKja6YNcRPOeDe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <button id="showVideoBtn">Show Video</button>
     </main>
     <footer>
-        <p>&race; 2024 My Simple Website. All rights reserved.</p>
+        <p>Hello!</p>
     </footer>
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h2>Settings</h2>
+            <label for="headerColor">Header Color:</label>
+            <input type="color" id="headerColor">
+            <label for="buttonColor">Button Color:</label>
+            <input type="color" id="buttonColor">
+            <button id="applySettings">Apply</button>
+            <button id="resetColors">Reset Colors</button>
+            <button id="closeSettings">Close</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
